@@ -27,14 +27,15 @@ body {
 .image {
     position: relative;
     overflow: hidden;
-    flex: 1 1 200px; /* 調整圖片大小 */
+    flex: 1 1 auto; /* 讓圖片保持原始大小 */
     max-width: 400px; /* 最大寬度為 400px */
+    height: 150px; /* 設定高度為 150px */
 }
 
 .image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* 保持圖片原始長寬比並填滿容器 */
     display: block;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
@@ -45,6 +46,7 @@ body {
 /*    transform: scale(1.1);*/
 /*}*/
 
+/*!* 當游標移動至圖片上時圖片放大 *!*/
 /*.image:hover img {*/
 /*    transform: scale(1.1);*/
 /*}*/
